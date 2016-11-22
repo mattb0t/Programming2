@@ -1,6 +1,5 @@
 // You may import any libraries you need.
 
-
 public class javaExercises
 {
 /********************************************
@@ -37,6 +36,16 @@ public class javaExercises
 public static void Question1()
 {
 
+  double a = (-5 + 8 * 6);
+  double b = ((55 + 9) % 9);
+  double c = (20 + -3 * 5 / 8);
+  double d = (5 + 15 / 3 * 2 - 8 % 3);
+
+  System.out.println(a);
+  System.out.println(b);
+  System.out.println(c);
+  System.out.println(d);
+
 }
 
 /*
@@ -57,6 +66,21 @@ public static void Question1()
 */
 //TODO Implement Question 2 here
 
+public static void Question2(double a, double b) {
+
+    System.out.println(a + b);
+    System.out.println(a - b);
+    System.out.println(a * b);
+    if(b == 0) {
+      System.out.println("Can't divide by zero!");
+    }
+    else {
+      System.out.println(a / b);
+    }
+    System.out.println(a % b);
+
+}
+
 /*
   Question 3: Write a function that takes a number as input and
               print its multiplication table up to 10.
@@ -73,6 +97,12 @@ public static void Question1()
 */
 //TODO Implement Question 3 here
 
+public static void Question3(int a) {
+  for(int x = 1; x <= 10; x++) {
+    System.out.println(a*x);
+  }
+}
+
 
 /*
   Question 4: Write a function to print the area and perimeter
@@ -86,6 +116,16 @@ public static void Question1()
               Area is = 176.71458676442586
 */
 //TODO Implement Question 4 here
+
+public static void Question4(double radius) {
+
+    double circumference  = 2 * radius * Math.PI;
+    double area           = radius * radius * Math.PI;
+
+    System.out.println(circumference);
+    System.out.println(area);
+
+}
 
 
 /*
@@ -113,6 +153,13 @@ public static void Question5(int a, int b)
 */
 //TODO Implement Question 6 here
 
+public static void Question6(double fahrenheit) {
+
+  double celsius = ((fahrenheit - 32) * 9 / 5);
+  System.out.println(celsius);
+
+}
+
 /*
   Question 7: Write a function that reads an integer between 0 and 1000
               and adds all the digits in the integer.
@@ -124,6 +171,19 @@ public static void Question5(int a, int b)
               The sum of all digits in 565 is 16
 */
 //TODO Implement Question 7 here
+
+public static void Question7(int number) {
+
+  String numberStr  = number + "";
+  Double answer     = 0.0;
+
+  for(int x = 0; x < numberStr.length(); x++) {
+    answer += Double.parseDouble(numberStr.substring(x, x+1));
+  }
+
+  System.out.println(answer);
+
+}
 
 /*
   Question 8: Write a function that gets a number from the user and
@@ -137,6 +197,22 @@ public static void Question5(int a, int b)
 */
 //TODO Implement Question 8 here
 
+public static void Question8(int number) {
+
+  if(number < 0) {
+    System.out.println(number + " is less than zero, ergo it is negative.");
+  }
+
+  else if(number > 0) {
+    System.out.println(number + " is greater than zero, ergo it is positive.");
+  }
+
+  else {
+    System.out.println(number + " is zero.");
+  }
+
+}
+
 /*
   Question 9: Write a function that returns a String takes a number
               from the user and generates an integer between 1 and 7
@@ -149,6 +225,44 @@ public static void Question5(int a, int b)
               Wednesday
 */
 //TODO Implement Question 9 here
+
+public static void Question9(int number) {
+  switch(number) {
+
+    case 1:
+      System.out.println("Monday");
+      break;
+
+    case 2:
+      System.out.println("Tuesday");
+      break;
+
+    case 3:
+      System.out.println("Wednesday");
+      break;
+
+    case 4:
+      System.out.println("Thursday");
+      break;
+
+    case 5:
+      System.out.println("Friday");
+      break;
+
+    case 6:
+      System.out.println("Saturday");
+      break;
+
+    case 7:
+      System.out.println("Sunday");
+      break;
+
+    default:
+      System.out.println("Invalid number.");
+      break;
+
+  }
+}
 
 /*
   Question 10: Write a function that prints a triangular pattern of
@@ -170,15 +284,35 @@ public static void Question5(int a, int b)
 */
 //TODO Implement Question 10 here
 
+public static void Question10(int rows) {
+
+  int count = 1;
+
+  for(int x = 0; x < rows; x++) {   //Row count
+
+    for(int i = 0; i < x; i++) {    //# count per row, no more numbers than the row number
+
+
+    }
+
+  }
+
+}
+
 
   public static void main(String[] args)
   {
     //Call Question functions here.
     Question1();
-
-
-
+    Question2(125, 24);
+    Question3(8);
+    Question4(7.5);
     Question5(15, 27);
+    Question6(212);
+    Question7(565);
+    Question8(35);
+    Question9(3);
+    //Question10();
 
   }
 }
